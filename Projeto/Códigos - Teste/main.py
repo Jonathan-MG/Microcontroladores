@@ -38,10 +38,10 @@ def direita():
         utime.sleep(0.0005)
     utime.sleep(1)
     
-s1 = Servo(0)
+s1 = Servo(2)
 
-in1_T = Pin(11, Pin.OUT)
-in2_T = Pin(10, Pin.OUT)
+in1_T = Pin(10, Pin.OUT)
+in2_T = Pin(11, Pin.OUT)
 in3_T = Pin(12, Pin.OUT)
 in4_T = Pin(13, Pin.OUT)
 
@@ -78,13 +78,13 @@ while True:
         # Frente
         in1_T.value(1)
         in2_T.value(0)
-        in3_T.value(0)
-        in4_T.value(1)
+        in3_T.value(1)
+        in4_T.value(0)
         
-        in1_F.value(0)
-        in2_F.value(1)
-        in3_F.value(0)
-        in4_F.value(1)
+        in1_F.value(1)
+        in2_F.value(0)
+        in3_F.value(1)
+        in4_F.value(0)
         
         centro()
         esquerda()
@@ -99,6 +99,3 @@ while True:
         in3.value(1)
         in4.value(1)
         utime.sleep(1)'''
-
-
-
