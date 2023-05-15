@@ -58,17 +58,6 @@ def Parar():
     
 def Frente():
     # Frente
-    in1_T.value(1)
-    in2_T.value(0)
-    in3_T.value(1)
-    in4_T.value(0)
-    in1_F.value(1)
-    in2_F.value(0)
-    in3_F.value(1)
-    in4_F.value(0)
-    
-def Re():
-    # Ré
     in1_T.value(0)
     in2_T.value(1)
     in3_T.value(0)
@@ -77,6 +66,17 @@ def Re():
     in2_F.value(1)
     in3_F.value(0)
     in4_F.value(1)
+    
+def Re():
+    # Ré
+    in1_T.value(1)
+    in2_T.value(0)
+    in3_T.value(1)
+    in4_T.value(0)
+    in1_F.value(1)
+    in2_F.value(0)
+    in3_F.value(1)
+    in4_F.value(0)
 
 Centro()
 Parar()
