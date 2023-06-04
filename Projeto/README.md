@@ -12,7 +12,7 @@ A ideia principal do projeto seria um carrinho que pudessemos controlar via blue
 Nosso Batmóvel é super completo e pode ter velocidade variada de acordo com a carga da bateria, portanto se deseja maior eficiencia matenha-o com carga, para possível troca de bateria favor consultar esquema elétrico do mesmo para não explodir o carro!
 OBS: Códigos usados estão disponíveis em suas respectivas pastas, favor consultar este mesmo git! Para a implementação do mesmo foi usado a IDE Thonny, conforme documentação oficial Raspberry recomenda. 
 
-[Veja só como ficou!!!](link do youtube) 
+[Veja só como ficou!!!](https://youtu.be/vZS8VveIKf4) 
 
 
 
@@ -38,5 +38,11 @@ OBS: Códigos usados estão disponíveis em suas respectivas pastas, favor consu
 
 - Bateria recarregável 3x - R$ 15,90 [Leroy Merlin](https://www.leroymerlin.com.br/bateria-li-ion-18650-6800mah-3-7v-recarregavel_1571036170?region=outros&gclid=Cj0KCQjw7PCjBhDwARIsANo7Cgm3fb9RE-DoZj841HlZLK-m85ldd46PftG2A1n_4ipDkV6OXRQiTGYaAnKEEALw_wcB)
 
-- **_Somando os itens, projeto fechado em R$ 455,34._**
+- Suporte para bateria recarregável - 12,40 + Frete [Loja da eletrônica](https://www.lojadarobotica.com.br/suporte-de-bateria-18650-para-3-baterias?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gclid=Cj0KCQjw7PCjBhDwARIsANo7CglmI22-X1Hgk5cILHv0flF3SEFqbkzA1oO3JdJJ5mQ_cLUA-OlPCfEaAjfGEALw_wcB)
+
+- Copos para reservatório água - R$ 36,00 - Comprado em loja física
+
+- Placa de madeira MDF 3mm para confecção de suporte copo - R$ 1,75 + Frete [Figueira Laser](https://www.figueiralaser.com.br/ver-recorte-personalizado/recorte-quadrado-ou-retangulo/3/mdf-3-mm/15.00-x-15.00-cm)
+
+- **_Somando os itens, projeto fechado em R$ 505,49._**
 
