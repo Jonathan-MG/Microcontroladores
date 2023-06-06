@@ -17,7 +17,7 @@ in4_F = Pin(18, Pin.OUT)
 
 def Ligar_Bomba():
     bomba.value(0)
-    utime.sleep(5)
+    utime.sleep(2)
     bomba.value(1)
 
 def servo_Map(x, in_min, in_max, out_min, out_max):
