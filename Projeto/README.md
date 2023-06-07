@@ -18,9 +18,9 @@ Como requisitos deste projeto tinhamos:
 OBS: Códigos usados estão disponíveis em suas respectivas pastas, favor consultar este mesmo git! Para a implementação do mesmo foi usado a IDE Thonny, conforme documentação oficial Raspberry recomenda. 
 
 [Veja só como ficou!!](https://youtu.be/vZS8VveIKf4)
-![Watch the video](https://youtu.be/E4jR8mIG90I)
+[Veja ele funcionando na faculdade!!](https://youtu.be/E4jR8mIG90I)
 
-<img src="/Fotos/carro.jpeg">
+<img src="/Projeto/Fotos/carro.jpeg">
 <img src="/Fotos/bombeiro.jpeg">
 
 
