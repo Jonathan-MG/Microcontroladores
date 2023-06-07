@@ -11,10 +11,11 @@
 A ideia principal do projeto seria um carrinho que pudessemos controlar via bluetooth, com isso implementados a ideia usando o o Raspberry Pi Pico como controlador do mesmo, adotamos o micro-servo para darmos direções ao carro e não somente frente-trás, colocamos uma bomba de água para o mesmo poder atender os chamados de Gotham City por completo. 
 Nosso Batmóvel é super completo e pode ter velocidade variada de acordo com a carga da bateria, portanto se deseja maior eficiencia matenha-o com carga, para possível troca de bateria favor consultar esquema elétrico do mesmo para não explodir o carro!
 Como requisitos deste projeto tinhamos: 
-- Realizar a conectividade do celular com o HC05 - bluetooth 
-- Ligar o bluetooth no raspberry para o mesmo dar comandos aos motores
-- Fazer com que os motores funcionem através da ponte H
-- Bomba de água ser acionada somente comando acionado
+-Realizar a conectividade do celular com o HC05 - bluetooth 
+-Ligar o bluetooth no raspberry para o mesmo dar comandos aos motores
+-Fazer com que os motores funcionem através da ponte H
+-Bomba de água ser acionada somente comando acionado
+
 OBS: Códigos usados estão disponíveis em suas respectivas pastas, favor consultar este mesmo git! Para a implementação do mesmo foi usado a IDE Thonny, conforme documentação oficial Raspberry recomenda. 
 
 [Veja só como ficou!!](https://youtu.be/vZS8VveIKf4)
