@@ -20,9 +20,6 @@ OBS: Códigos usados estão disponíveis em suas respectivas pastas, favor consu
 [Veja só como ficou!!](https://youtu.be/vZS8VveIKf4)
 [Veja ele funcionando na faculdade!!](https://youtu.be/E4jR8mIG90I)
 
-<img src="/Projeto/Fotos/carro.jpeg" height="400" width="533" >
-<img src="/Projeto/Fotos/bombeiro.jpeg" height="400" width="533" >
-
 
 ### Custos do projeto 
 **Materiais usados:**
