@@ -55,5 +55,8 @@ c7.grid(row=3,column=8)
 c3.grid(row=0,column=3)
 c5.grid(row=0,column=5)
 
+# Ajustando a janela para 800x480, tamanho da tela 
+window.geometry("800x480")
+
 # Inicie o loop de eventos da GUI
 window.mainloop()
