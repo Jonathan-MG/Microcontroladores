@@ -1,6 +1,7 @@
 import tkinter as tk
 import serial
 import time
+import sys
 
 bluetooth = serial.Serial("/dev/rfcomm0",9600)
 
@@ -42,7 +43,7 @@ def stop():
     
 def exit_app():
     #Código para sair do aplicativo
-    exit()
+    sys.exit(0)
 
 # Crie uma janela
 window = tk.Tk()

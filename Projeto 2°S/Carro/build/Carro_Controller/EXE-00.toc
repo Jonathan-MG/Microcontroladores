@@ -37,10 +37,10 @@
    '2°S/Carro/build/Carro_Controller/localpycs/pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
-   '/usr/local/lib/python3.9/dist-packages/PyInstaller/loader/pyiboot01_bootstrap.py',
+   '/home/admin/.local/lib/python3.9/site-packages/PyInstaller/loader/pyiboot01_bootstrap.py',
    'PYSOURCE'),
   ('pyi_rth__tkinter',
-   '/usr/local/lib/python3.9/dist-packages/PyInstaller/hooks/rthooks/pyi_rth__tkinter.py',
+   '/home/admin/.local/lib/python3.9/site-packages/PyInstaller/hooks/rthooks/pyi_rth__tkinter.py',
    'PYSOURCE'),
   ('Carro_Controller',
    '/home/admin/Desktop/Microcontroladores/Projeto '
@@ -49,8 +49,8 @@
  [],
  False,
  False,
- 1695811692,
+ 1695812749,
  [('run',
-   '/usr/local/lib/python3.9/dist-packages/PyInstaller/bootloader/Linux-64bit-arm/run',
+   '/home/admin/.local/lib/python3.9/site-packages/PyInstaller/bootloader/Linux-64bit-arm/run',
    'EXECUTABLE')],
  '/lib/aarch64-linux-gnu/libpython3.9.so.1.0')
