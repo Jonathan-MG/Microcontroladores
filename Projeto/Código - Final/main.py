@@ -1,9 +1,15 @@
-from machine import Pin, PWM, UART
+from machine import Pin, PWM, UART,ADC
 import utime
 from servo import Servo
 
 uart = UART(0,9600)
 bomba = Pin(16, Pin.OUT)
+
+soil = ADC(Pin(28)) 
+uart = UART(0,9600)
+min_moisture=37000
+max_moisture=65535
+readDelay = 0.5 
 
 led = Pin(25, Pin.OUT)
 led.value(1)
@@ -61,6 +67,13 @@ def Re():
     in2_F.value(0)
     in3_F.value(1)
     in4_F.value(0)
+    
+def Confere_nivel():
+    moisture = int(((max_moisture-soil.read_u16())*100/(max_moisture-min_moisture)))
+    nivel_dagua= str(moisture).replace(".","")+"F"
+    uart.write(nivel_dagua)
+    return moisture
+
 
 Centro()
 Parar()
@@ -69,9 +82,10 @@ bomba.value(1)
 while True:
     if uart.any():
         command = uart.readline()
-        #print(command)   # descomente esta linha para ver os dados recebidos
+        print(command)   # descomente esta linha para ver os dados recebidos
         if command==b'B':
             Ligar_Bomba()
+            Confere_nivel()
         elif command==b'F':
             Frente()
         elif command==b'P':
@@ -84,3 +98,5 @@ while True:
             Centro()
         elif command==b'E':
             Esquerda()
+        elif command==b'N':
+            Confere_nivel()

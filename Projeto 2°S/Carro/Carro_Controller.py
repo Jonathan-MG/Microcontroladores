@@ -4,6 +4,12 @@ import time
 import sys
 
 bluetooth = serial.Serial("/dev/rfcomm0",9600)
+def inicio():
+    #código para validar a quantidade de água
+    string='N'
+    bluetooth.write(string.encode('utf-8'))
+    
+inicio()
 
 def throw_water():
     # Código para lançar água
@@ -43,12 +49,14 @@ def center():
     #Código para sair do aplicativo
     string='C'
     bluetooth.write(string.encode('utf-8'))
+    
+
 
 # Crie uma janela
 window = tk.Tk()
 window.title("Controle Carrinho")
 window.geometry("800x480")  # Ajustando o tamanho da janela
-window.attributes('-fullscreen',True)
+#window.attributes('-fullscreen',True)
 
 # Cores personalizadas
 bg_color = "#474747"  # Cor de fundo da janela
@@ -87,4 +95,22 @@ btn_direction_center.grid(row=7, column=0, padx=(100,275), pady=10, sticky="w")
 btn_stop.grid(row=7, column=0, padx=(15,100), pady=10, sticky="e")
 
 # Iniciando o loop de eventos da GUI
-window.mainloop()
+nivel = []
+char = ""
+while True:
+    window.update()
+    if bluetooth.in_waiting > 0:
+        char = str(bluetooth.read()).replace("b'","").replace("'","")
+        if char == 'F':
+            valor = "".join(nivel)
+            nivel = []
+            medicao = int(valor)
+            print(f'Medicao: {medicao}')
+        else:
+           nivel.append(char)
+    #print(char)
+    valor = ""
+    window.update()
+    
+    
+    
