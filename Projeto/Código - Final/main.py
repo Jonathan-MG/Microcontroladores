@@ -7,7 +7,7 @@ bomba = Pin(16, Pin.OUT)
 
 soil = ADC(Pin(28)) 
 uart = UART(0,9600)
-min_moisture=37000
+min_moisture=44500
 max_moisture=65535
 readDelay = 0.5 
 
@@ -70,6 +70,8 @@ def Re():
     
 def Confere_nivel():
     moisture = int(((max_moisture-soil.read_u16())*100/(max_moisture-min_moisture)))
+    if moisture >= 100:
+        moisture=100
     nivel_dagua= str(moisture).replace(".","")+"F"
     uart.write(nivel_dagua)
     return moisture
@@ -84,8 +86,11 @@ while True:
         command = uart.readline()
         print(command)   # descomente esta linha para ver os dados recebidos
         if command==b'B':
-            Ligar_Bomba()
-            Confere_nivel()
+            if Confere_nivel() > 0:
+                Ligar_Bomba()
+                Confere_nivel()
+            else:
+                pass
         elif command==b'F':
             Frente()
         elif command==b'P':
