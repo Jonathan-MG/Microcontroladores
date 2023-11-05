@@ -2,6 +2,7 @@ import tkinter as tk
 import serial
 import time
 import sys
+import os
 import requests
 
 
@@ -78,7 +79,8 @@ def stop():
     
 def exit_app():
     #Código para sair do aplicativo
-    sys.exit(0)
+    os._exit(0)
+    
     
     
 def center():
@@ -148,9 +150,6 @@ while True:
             print(f'Medicao: {medicao}')
         else:
            nivel.append(char)
-    #print(char)
-    valor = ""
-    
-    
-    
+        #print(char)
+        valor = ""
     
