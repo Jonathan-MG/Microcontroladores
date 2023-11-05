@@ -2,8 +2,49 @@ import tkinter as tk
 import serial
 import time
 import sys
+import requests
+
+
+TOKEN = "BBUS-J54N9Hq95Bfwin9E4Au5P9Xl9LtjAy"  # Put your TOKEN here
+DEVICE_LABEL = "nivel-agua"  # Put your device label here 
+VARIABLE_LABEL_1 = "nivel"  # Put your first variable label here
+
+def build_payload(variable_1,value):
+    value_1 = value
+    #print(value_1)
+    payload = {variable_1: value_1}
+    return payload
+
+def post_request(payload):
+    # Creates the headers for the HTTP requests
+    url = "http://industrial.api.ubidots.com"
+    url = "{}/api/v1.6/devices/{}".format(url, DEVICE_LABEL)
+    headers = {"X-Auth-Token": TOKEN, "Content-Type": "application/json"}
+    # Makes the HTTP requests
+    status = 400
+    attempts = 0
+    while status >= 400 and attempts <= 5:
+        req = requests.post(url=url, headers=headers, json=payload)
+        status = req.status_code
+        attempts += 1
+        time.sleep(1)
+    # Processes results
+    print(req.status_code, req.json())
+    if status >= 400:
+        print("[ERROR] Could not send data after 5 attempts, please check \
+            your token credentials and internet connection")
+        return False
+    print("[INFO] request made properly, your device is updated")
+    return True
+
 
 bluetooth = serial.Serial("/dev/rfcomm0",9600)
+def inicio():
+    #código para validar a quantidade de água
+    string='N'
+    bluetooth.write(string.encode('utf-8'))
+    
+inicio()
 
 def throw_water():
     # Código para lançar água
@@ -39,10 +80,13 @@ def exit_app():
     #Código para sair do aplicativo
     sys.exit(0)
     
+    
 def center():
     #Código para sair do aplicativo
     string='C'
     bluetooth.write(string.encode('utf-8'))
+    
+
 
 # Crie uma janela
 window = tk.Tk()
@@ -87,4 +131,26 @@ btn_direction_center.grid(row=7, column=0, padx=(100,275), pady=10, sticky="w")
 btn_stop.grid(row=7, column=0, padx=(15,100), pady=10, sticky="e")
 
 # Iniciando o loop de eventos da GUI
-window.mainloop()
+nivel = []
+char = ""
+while True:
+    window.update()
+    if bluetooth.in_waiting > 0:
+        char = str(bluetooth.read()).replace("b'","").replace("'","")
+        if char == 'F':
+            valor = "".join(nivel)
+            nivel = []
+            medicao = int(valor)
+            payload = build_payload(VARIABLE_LABEL_1,medicao)
+            print("[INFO] Attemping to send data")
+            post_request(payload)
+            print("[INFO] finished")
+            print(f'Medicao: {medicao}')
+        else:
+           nivel.append(char)
+    #print(char)
+    valor = ""
+    
+    
+    
+    
